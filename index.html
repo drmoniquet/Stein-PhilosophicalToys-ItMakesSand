@@ -1,6 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
+<!--
+  Sources:
+  Built on three.js (library, docs, examples):
+    https://threejs.org
+    https://threejs.org/docs
+    https://threejs.org/examples
+
+  Sand dissolve — sampling a canvas's pixels and scattering the
+  opaque ones as points:
+    Louis Hoebregts (Mamboleoo), "How to convert an image into particles"
+    https://www.mamboleoo.be/articles/how-to-convert-an-image-into-particles
+    Codrops, "Interactive Particles with Three.js"
+    https://tympanus.net/codrops/2019/01/17/interactive-particles-with-three-js/
+    Codrops, "Implementing a Dissolve Effect with Shaders and Particles in Three.js"
+    https://tympanus.net/codrops/2025/02/17/implementing-a-dissolve-effect-with-shaders-and-particles-in-three-js/
+
+  Text painted to a canvas and used as a texture, plus the
+  justify/spread typesetting — Canvas API:
+    https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API
+    https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData
+
+  Drag-to-turn with momentum — the idea from three.js OrbitControls:
+    https://threejs.org/docs/#examples/en/controls/OrbitControls
+
+  The design — inside-wall drum read from above, the line-per-turn reading, the Stein text and colours — is inspired by zoetropes seen in Berlin museum of computers. 
+-->
+  
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>It Makes Sand — Roastbeef (Stein, Tender Buttons)</title>
