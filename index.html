@@ -181,21 +181,18 @@
 
 <script>
 /*
-  It Makes Sand
-  Stein's "Roastbeef" on a paper strip inside a little tin drum.
-  One line travels all the way around, then the strip steps to the next.
-  Drag to turn it, drag up/down to tilt, wheel to zoom; "make it sand"
-  pours the whole strip onto the floor.
+  It Makes Sand Interactivity:
+  Stein's "Roastbeef" laid out on a paper strip inside a zoetrope drum. One line travels all the way around, then the strip steps to the next.
+  Controls: Drag to turn it, drag up/down to tilt, wheel to zoom; "make it sand" pours the whole strip onto the floor.
 
   Still a draft — fussing with the timing.
 */
 
-// Flip to 1 if the lettering comes out backwards (we read the *inside*
-// of the band, so the winding can go either way depending on the build).
+// Option: Flip to 1 if the lettering comes out backwards (we read the *inside* of the band, so the winding can go either way depending on the build).
 const DIR = -1;
 
-// Colour words keep their own colour; the little connective words go
-// faint; everything else is plain ink.
+// Colour words keep their own colour; the little connective words go faint; everything else is plain ink.
+
 const COL = {
   ink:    "#33271b",
   faint:  "#6f5d46",
@@ -246,8 +243,7 @@ const BAND_H = 2 * Math.PI * R_BAND * (STRIP_H / TURN); // keeps the type un-str
 const BAND_TOP = BAND_MID + BAND_H / 2;
 const BAND_BOT = BAND_MID - BAND_H / 2;
 
-// Break the poem into lines that each fill one turn, then paint them
-// onto a tall "master" strip we scroll around.
+// Break the poem into lines that each fill one turn, then paint them onto a tall "master" strip we scroll around.
 function wrapToLines(ctx, maxW) {
   ctx.font = "400 " + FS + "px 'Libre Caslon Text','Caslon',Georgia,serif";
   const words = POEM.split(/\s+/);
@@ -350,7 +346,7 @@ function buildMaster() {
   }
 }
 
-// --- the visible strip: composite the scrolling window each frame ---
+// --- this is the visible strip: composites the scrolling window each frame ---
 const bandCanvas = document.createElement("canvas");
 bandCanvas.width = TURN;
 bandCanvas.height = STRIP_H;
@@ -368,7 +364,7 @@ function paintStrip() {
     bctx.drawImage(master, dx, -oy - masterH);  // the wrap copy above
   }
 
-  // a soft glow on the centre line so the eye knows where to land
+  // add a soft glow on the centre line so the eye knows where to land
   const mid = STRIP_H / 2;
   const glow = bctx.createLinearGradient(0, mid - LINE_H * 0.62, 0, mid + LINE_H * 0.62);
   glow.addColorStop(0,   "rgba(255,236,200,0)");
@@ -380,8 +376,8 @@ function paintStrip() {
   bandTex.needsUpdate = true;
 }
 
-// Band built by hand so I know exactly where each pixel lands in 3D
-// (the dissolve reuses the same mapping in bandSpot).
+// Band: 
+// the dissolve reuses the same mapping in bandSpot.
 function buildBand() {
   const segs = 200;
   const pos = [], uv = [], idx = [];
@@ -719,7 +715,7 @@ function start() {
   setTimeout(function () { hint.classList.add("gone"); }, 9000);
 }
 
-// wait for Caslon so the strip isn't baked in a fallback face
+// Font fix: wait for Caslon so the strip isn't baked in a fallback face
 const ready = (document.fonts && document.fonts.load)
   ? Promise.race([
       document.fonts.load("400 80px 'Libre Caslon Text'").then(function () { return document.fonts.ready; }),
