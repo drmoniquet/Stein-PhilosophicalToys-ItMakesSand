@@ -2,6 +2,8 @@
 
 https://drmoniquet.github.io/Stein-PhilosophicalToys-ItMakesSand/
 
-An experiment in philosophical toy building that uses a part of Gertrude Stein's Tender Buttons (1914): ROASTBEEF. In the inside there is sleeping, in the outside there is reddening, in the morning there is meaning, in the evening there is feeling. In the evening there is feeling. In feeling anything is resting, in feeling anything is mounting, in feeling there is resignation, in feeling there is recognition, in feeling there is recurrence and entirely mistaken there is pinching. All the standards have steamers and all the curtains have bed linen and all the yellow has discrimination and all the circle has circling. This makes sand. (p33)
+An experiment in philosophical toy building that uses a part of Gertrude Stein's Tender Buttons (1914): ROASTBEEF. 
+
+In the inside there is sleeping, in the outside there is reddening, in the morning there is meaning, in the evening there is feeling. In the evening there is feeling. In feeling anything is resting, in feeling anything is mounting, in feeling there is resignation, in feeling there is recognition, in feeling there is recurrence and entirely mistaken there is pinching. All the standards have steamers and all the curtains have bed linen and all the yellow has discrimination and all the circle has circling. This makes sand. (Stein, p. 33)
 
 The goal is to remind readers that the primary visual cultural practice of her day, despite her claims she went to the cinema, was the zoetrope and magic lantern.
